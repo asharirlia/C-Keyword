@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language || All Keywords</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous">
+    </script>
+    <script>        
+    var keywords=[
+            ["Select",""],
+            ["auto","The auto keyword declares automatic variables. For example: <br/> auto int var1; <br/> This statement suggests that var1 is a variable of storage class auto and type int. <br/> Variables declared within function bodies are automatic by default. They are recreated each time a function is executed.Since automatic variables are local to a function, they are also called local variables."],
+            ["const","An identifier can be declared constant by using the const keyword. <br/> const int a = 5;"],
+            ["break","The break statement terminates the innermost loop immediately when it's encountered. <br/> It's also used to terminate the switch statement."],
+            ["continue","The continue statement skips the statements after it inside the loop for the iteration."],
+            ["do","int i; <br/> do{ <br/>printf(''%d'',i); <br/> i++; <br/> } while (i<10)"],
+            ["for","There are three types of loops in C programming. The for loop is written in C programming using the keyword for. For example: <br/> for (i=0; i< 9;++i)<br/>{ <br/>  printf('' %d '',i); <br/> }<br/> Output <br/> 0 1 2 3 4 5 6 7 8"],
+            ["while","The syntax of the while loop is:<br/><br/>while (testExpression)<br/> {<br/>// the body of the loop<br/>}"],            
+            ["default","switch(expression)<br/> { <br/> case '1': <br/> //some statements to execute when 1 <br/> break; <br/>    case '5': <br/>//some statements to execute when 5 <br/>break; <br/>  default: <br/>//some statements to execute when default; <br/> }"],
+            ["double","double are used to hold real numbers.<br/> double price; <br/> The size of double (double precision float data type) is 8 bytes."],
+            ["float","float are used for declaring floating type variables. For example: <br/> float number; //Here, number is a single-precision floating type variable <br/> The size of float (single precision float data type) is 4 bytes."],
+            ["int","The int keyword is used to declare integer type variables. For example:<br/> int count; <br/> Here, count is an integer variable."],
+            ["char","The char keyword declares a character variable. For example:<br/> char alphabet; <br/> Here, alphabet is a character type variable."],
+            ["short","The short keyword are type modifiers that alter the meaning of a base data type to yield a new type.<br/> short int smallInteger; <br/> Range -32768 to 32767"],
+            ["signed","The signed keyword are type modifiers that alter the meaning of a base data type to yield a new type. <br/> signed int normalInteger; <br/>signed int	Range =   -32768 to 32767"],
+            ["unsigned","The unsigned keyword are type modifiers that alter the meaning of a base data type to yield a new type.<br/> unsigned int positiveInteger; <br/> Range- 0 to 65535"],
+            ["long","The long keyword are type modifiers that alter the meaning of a base data type to yield a new type. <br/> long int bigInteger; <br/> long int	Range =   -2147483648 to 214743648"],
+            ["if","In C programming, if and else are used to make decisions.<br/> if (i == 1)<br/> printf(''i is 1.'') <br/> else <br/> printf(''i is not 1.'') <br/> If the value of i is other than 1, <br/>the output will be :i is not 1"],
+            ["else","In C programming, if and else are used to make decisions.<br/> if (i == 1)<br/> printf(''i is 1.'') <br/> else <br/> printf(''i is not 1.'') <br/> If the value of i is other than 1, <br/>the output will be :i is not 1"],
+            ["struct","The struct keyword is used for declaring a structure. A structure can hold variables of different types under a single name. <br/> struct student <br/>{ <br/> char name[80]; <br/>float marks;<br/>int age;<br/>}s1, s2;"],
+            ["typedef","The typedef keyword is used to explicitly associate a type with an identifier.<br/><br/>typedef float kg;<br/>kg bear, tiger;"],
+            ["union","A union is used for grouping different types of variables under a single name.<br/>union student<br/> {<br/>char name[80];<br/>float marks;<br/>int age;<br/>}"],
+            ["switch","switch(expression)<br/> { <br/> case '1': <br/> //some statements to execute when 1 <br/> break; <br/>    case '5': <br/>//some statements to execute when 5 <br/>break; <br/>  default: <br/>//some statements to execute when default; <br/> }"],
+            ["case","The switch and case statement is used when a block of statements has to be executed among many blocks. For example: <br/> switch(expression)<br/> { <br/> case '1': <br/> //some statements to execute when 1 <br/> break; <br/>    case '5': <br/>//some statements to execute when 5 <br/>break; <br/>  default: <br/>//some statements to execute when default; <br/> }"],
+            ["void","The void keyword meaning nothing or no value.<br/> void testFunction(int a)<br/>{<br/>  ..... <br/>} <br/>Here, the testFunction() function cannot return a value because its return type is void."],
+            ["static","The static keyword creates a static variable. The value of the static variables persists until the end of the program. For example:<br/>static int var;<br/>"],
+            ["enum","Enumeration types are declared in C programming using keyword enum. For example:<br/> enum suit<br/>{<br/> <br/> hearts;<br/>spades;<br/>clubs;<br/> diamonds;<br/>}; <br/>Here, an enumerated variable suit is created having tags: hearts, spades, clubs, and diamonds."],
+            ["goto","The goto statement is used to transfer control of the program to the specified label. For example:<br/>for(i=1; i<5; ++i)<br/>{<br/>if (i==10)<br/> goto error;<br/>} <br/>printf(''i is not 10'');<br/>error:<br/> printf(''Error, count cannot be 10.'');<br/>Output<br/>Error, count cannot be 10."],
+            ["register","The register keyword creates register variables which are much faster than normal variables.<br/><br/>register int var1;"],
+            ["sizeof","The sizeof keyword evaluates the size of data (a variable or a constant).<br/>#include <stdio.h><br/>int main()<br/>{<br/>printf(''%u bytes.'',sizeof(char));<br/>} <br/>Output<br/>1 bytes."],
+            ["volatile","The volatile keyword is used for creating volatile objects. A volatile object can be modified in an unspecified way by the hardware.<br/><br/>const volatile number;<br/><br/>Here, number is a volatile object.<br/>Since number is a constant, the program cannot change it.<br/> However, hardware can change it since it is a volatile object."],
+            ["extern","The extern keyword declares that a variable or a function has external linkage outside of the file it is declared."],
+            ["return","The return keyword terminates the function and returns the value.<br/>int func()<br/> {<br/>int b = 5;<br/>return b;<br/>}<br/><br/>This function func() returns 5 to the calling function."],
+        ];
+        var otherTopics=[
+            ["Introduction to C"],
+            ["C Data types"],
+            ["C variables, Constant and Literal"],
+            ["C Flow Control"],
+            ["C Programming Strings"],
+            ["C Programming Pointers"],
+            ["C file output/input"],
+            ["Additional topics"],
+        ];
+        var links=[
+            ["https://www.tutorialspoint.com/cprogramming/index.htm"],
+            ["https://www.tutorialspoint.com/cprogramming/c_data_types.htm"],
+            ["#"],
+            ["#"],
+            ["#"],
+            ["#"],
+            ["#"],
+            ["#"],
+    
+            ]
+
+        function addTopicsToList()
+        {
+            var list="";
+            for(var i=0;i<otherTopics.length;i+=1)
+            list+='<li><a href="'+links[i]+'">'+otherTopics[i]+'</a></li> <hr/>';
+            //set list in ul tag
+            document.getElementById("otherTopic").innerHTML=list;
+        }
+        function addKeywordsToSelectTag()
+        {
+            var option="";
+            for(var i=0; i<keywords.length;i+=1)
+            option+='<option value="'+i+'">'+keywords[i][0]+'</option>';
+
+            //Set option in select tag
+            document.getElementById("keyword").innerHTML=option;
+        }
+        function displayKeywords()
+        {
+            //get the index of selected keyword
+            var index=parseInt(document.getElementById("keyword").value);
+            //set uses in uses section of keyword
+            document.getElementById("kname").innerHTML=keywords[index][0];
+            //set uses in uses section of keyword
+            document.getElementById("uses").innerHTML=keywords[index][1];
+        }
+    </script>
+    <style>
+        a:hover{
+            color: red;
+            padding: 10px;
+
+        }
+        .heading:hover{
+            color: black;
+            
+        }
+        .select:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body onload="addKeywordsToSelectTag(); addTopicsToList();">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 p-5 bg bg-danger text-white">
+                <h1 class="text-center heading">C Programming Language</h1>
+             </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="h3 text-success">Related topics:</p>
+                <hr/>
+                <ul class="bg bg-light text-danger h6" id="otherTopic"></ul>    
+            </div>
+
+            <div class="col-sm-8 bg bg-default">
+                <label for="keywords" class="h4 text-warning">List of all Keywords in C Language</label>
+                <select id="keyword" class="form-control form-control-lg border border-danger select" onchange="displayKeywords();"></select>
+                <br/>
+                <p id="kname" class="h4 text-info">Keyword Name</p> <br/>
+                <p id="uses" class="bg bg-light text-dark lh-lg fs-5"> Discription</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
